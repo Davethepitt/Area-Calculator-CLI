@@ -6,7 +6,7 @@ In an effort to learn Python I'm trying to find little projects I can make which
 
 Don't use this code as any form of good practise. I literally do not know what I'm doing. I have no doubt there would be very easy ways to streamline this code and make things work more efficiently but we all have to start somewhere.
 
-Dave Pitt
+Dave Pitt 
 21st November 2025
 
 ### Details
