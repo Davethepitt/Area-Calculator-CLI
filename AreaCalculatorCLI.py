@@ -1,7 +1,6 @@
 # Main function
-
 def main():
-    PrintWelcomeMessage()
+    # Print the shape selection menu
     print("What shape do you want to calculate the area for?\n")
     print("1. Circle")
     print("2. Rectangle")
@@ -9,6 +8,8 @@ def main():
     print("4. Square")
     print("5. Exit the Program\n")
     shape = input("Enter the number corresponding to your choice: ")
+
+    # Depending on user input call the relevant function
     if shape == "1":
         CalculateCircle()
     elif shape == "2":
@@ -24,6 +25,9 @@ def main():
         print("Invalid input. Please try again.\n")
         main()
 
+# Calculation functions for each shape
+
+# Circle area calculation
 def CalculateCircle():
     print("You selected Circle.")
     radius = input("Enter the radius of the circle: ")
@@ -35,6 +39,7 @@ def CalculateCircle():
         print("\nThe area of the circle is: " + str(circlearea)+"\n")
         main()
 
+# Rectangle area calculation
 def CalculateRectangle():
     print("You selected Rectangle.")
     longlength = input("Enter the length of the rectangle: ")
@@ -47,6 +52,7 @@ def CalculateRectangle():
         print("The area of the rectangle is: " + str(rectanglearea))
         main()
 
+# Triangle area calculation
 def CalculateTriangle():
     print("You selected Triangle.")
     baselength = input("Enter the base length of the triangle: ")
@@ -59,6 +65,7 @@ def CalculateTriangle():
         print("The area of the triangle is: " + str(trianglearea))
         main()
 
+# Square area calculation
 def CalculateSquare():
     print("You selected Square.")
     length = input("Enter the length of one side of the square: ")
@@ -70,7 +77,6 @@ def CalculateSquare():
         print("The area of the square is: " + str(squarearea))
         main()
 
-
 # Function which prints the welcome message
 def PrintWelcomeMessage():
         print(r"""                             _____      _            _       _             
@@ -79,10 +85,14 @@ def PrintWelcomeMessage():
    / /\ \ | '__/ _ \/ _` | | |    / _` | |/ __| | | | |/ _` | __/ _ \| '__|
   / ____ \| | |  __/ (_| | | |___| (_| | | (__| |_| | | (_| | || (_) | |   
  /_/    \_\_|  \___|\__,_|  \_____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_| """)
-        print(r"""                        Written by Dave Pitt""")
+        print(r"""                         Written by Dave Pitt""")
         print("")
+
 
 
 # If name=main run main
 if __name__ == "__main__":
+    # We only want to print welcome message once
+    PrintWelcomeMessage()
+    # Run main function
     main()
